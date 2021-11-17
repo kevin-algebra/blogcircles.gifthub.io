@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax example</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<h1> Aritmetica. </h1>
+
+Vamos a considerar el conjunto de los números naturales \(\mathbb{N}\) , antes de comenzar deberemos de introducir unas 
+definiciones previas.
+  
+<p> <b> Definición 1 : </b> Un número \(p\in \mathbb{N}\) (\(p>1\)) es un <b> número primo </b> si la unica 
+ manera de representar a \(p\) como producto de números naturales es \[p=1\cdot p\] </p>  
+  
+ <p> Como ejemplo de esta definición tenemos al número \(619 \) (dejo al lector probar este echo) , los primeros números primos 
+   son \[2,3,5,7,11,13,17,21,.....\] si un número no es primo decimos que es 
+  compuesto (tenemos una nueva clasificación de los números naturales).</p>
+  
+  
+ <p> <b> Definición 2 :  </b> Con factorización prima nos referiremos a expresar un número natural \(n\) dado de
+  la siguiente manera \[n=p_{0}\cdot p_{1}\cdot p _{2}\cdot \dots \cdots p_{n-1} \] donde los \(p_{j}\) (
+   \(0\leq j \leq n-1\) ) son números primos (les vamos a llamar factores primos) , 
+   estan ordenados los factores de esta manera \(p_{j}\leq p_{j+1}\).
+   
+   
+  </p> 
+
+  
+  <p> Por ejemplo , la factorización prima del número \(258\) es \(258=2\cdot 129=2\cdot 3 \cdot 43 \) donde 
+  \(2,3\) y \(43\) son primos (las factorizaciónes primas son importantes y muy utiles , al final como colofon expondre algunos usos utiles.) , el resultado de interes es el <b> Teorema Fundamental de la Aritmetica. </b> </p>
+  
+  <p>    <center> <b>Teorema :</b>  <i>  Todo \(n\in \mathbb{N}\) con \(n>1\) tiene una unica factorización prima.  </i> </center>  </p>
+  
+  
+  <h2>  Explicación. </h2> 
+  
+  <p> ¿Que nos esta diciendo? , retomemos nuestro ejemplo de factorización prima , vamos a considerar de nueva cuenta nuestro 
+  ejemplo de factorización prima : \(258=2\cdot 3 \cdot 43\) , el teorema fundemental de la aritmetica basicamente dice que si
+  tenemos un número natural mayor a \(1\) y una factorización prima de este no se podran hallar otros primos \(q_{0},..,q_{m}\) 
+   todos ellos diferentes a los primos que aparecen en la factorización prima "original" tales que su producto nos de el
+  mismo número natural que consideramos de partida.
+ </p>
+  
+  <p>  El enunciado tiene mucho sentido (y como veremos en su demostración es consecuencia de las propiedades de los enteros)
+  , vamos a retomar de nuevo nuestro ejemplo \(258=2\cdot 3 \cdot 43 \) , si aprovechamos la propiedad asociativa de la 
+  multiplicación tenemos que \(258=2\cdot (3\cdot 43)=2\cdot 129\) , \(258=3\cdot (2\cdot 43)=3\cdot 86\) , \(258=43\cdot (2\cdot 3)=43\cdot 6\) , vemos que los números 
+  \(2,129,3,86,43,6\) son todos los divisores de \(258\) (esto es obvio pero recalcable) , si tuvieramos otras factorizaciones primas 
+  entonces podriamos generar diferentes divisores a la hora de aplicar la propiedad asociativa (es interesante pensar en ello y en la optica de que se "preservan" los divisores , ademas de pensar en 
+    "intersecciones de factorizaciones (en terminos de divisores)")  , 
+  , por este teorema podemos pensar en el echo de que todos los enteros se construyen a partir de los números primos.</p>
+  
+  <p> Otra forma de expresar lo que nos esta diciendo el enunciado es que el anillo de los números enteros \(\mathbb{Z}\) es un 
+  dominio de factorización unica (para el lector confundido piense en un anillo como cualquier objeto que sigue las mismas reglas que
+   los números enteros , por ejemplos los racionales forman un anillo) , en general decimos que un anillo \(D\) es un dominio de
+  factorización unica (o sea que captura la idea del teorema fundemental de la aritmetica en el) si todo elemento \(d\in D\) se
+  factoriza de forma unica como producto de elementos primos , por ejemplo en el anillo \(\mathbb{Z}[\sqrt{5}]\) no es un dominio
+  de factorización unica , ya que por ejemplo \(6=2\cdot 3=(1+\sqrt{5})(1-\sqrt{5})\).  </p>
+  
+  <h2> Demostración. </h2>
+  
+ 
+  Recurrire a una prueba elemental pero algo mas dificil de seguir.
+  
+  <p> Vamos a pensar en el conjunto \(F\) de todos los naturales tales que tienen dos factorizaciónes primas distintas
+  , como es un conjunto de número naturales debe de existir un \(n\) tal que sea el menor elemento de \(C\) (esto
+   es un echo conocido de los naturales ) , este número \(n\) como se definio cumple que \[n=p_{0}...p_{n}=q_{0}..q_{m}\]</p>
+  donde los \(p_{i},q_{j} \ (0\leq i \leq n, 0\leq j \leq m)\) son primos y ademas \(p_{0}\leq ...\leq p_{n}, q_
+  {0}\leq ... \leq q_{m}\). Hay que notar \(p_{0}=q_{0}\) no es posible ya que dividiendo ambos miembros de lo anterior
+  igualdad por \(p_{0}=q_{0}\) obtenemos un dos descomposiciones diferentes para un entero que es menor que \(n\) (ya que
+  este número fue dividido) lo que es una contradicción (en el echo de \(n\) es el menor elemento de \(F\)) , asi que los
+  unicos posibles casos son que \(p_{0}>q_{0} \) o \(q_{0}>p_{0}\) , sin perdida de generalidad asumamos que \(p_{0}>q_{0}\).
+  
+  <p>  Vamos a construir el entero \[r=n-(p_{0}q_{1}\cdot q_{2}....q_{m})\] el cual es un natural ya que
+    \(q_{0}>p_{0}\) (ademas de que por su definición \(n>r\) por lo que su descomposición en factores primos es unica) , ahora como \(n\) tiene dos representaciones
+  en terminos de números primos las vamos a remplazar en la anterior igualdad teniendo las igualdades \[r
+    =(p_{0}....p_{n})-(p_{0}q_{1}...q_{m})=p_{0}(p_{1}p_{2}...p_{n}-q_{1}....q_{m})\] , \[r=(q_{0}...q_{m})
+    -(p_{0}q_{1}...q_{m})=(q_{0}-p_{0})(q_{1}...q_{m})\] de las igualdades podemos deducir que \(p_{0}\) es un factor
+  de \(r\) y por ende debe de ser factor de \(q_{0}-p_{0}\) o de \(q_{1}...q_{m}\) (suponemos que hay factorización
+    unica para \(r\) por ser menor que el y por obvia no estar en \(F\)) , no se puede tener que \(p_{0}\) sea
+  factor \(q_{1}....q_{m}\) ya que se puede ver que \(q_{j}>p_{0}\) para todo \(0 \leq j\leq m\) (por como se
+    establecio el orden los factores \(q_{j}\) al inicio de la prueba y que \(q_{0}>p_{0}\)) , asi que necesariamente
+  \(p_{0}\) es factor de \(q_{0}-p_{0} \) de modo que va a existir un \(k\in \mathbb{N}\) tal que \[q_{0}-p_{0}=p_{0}\cdot k \]
+  o sea que \(q_{0}=p_{0}(k+1)\) o lo que es lo mismo \(q_{0}\) es compuesto , esto contradice el echo de que es primo ,
+  luego llegamos a una contradicción , por lo que el conjunto \(F\) es vacio y no existe ningun natural que no tenga factorización unica.
+  </p>
+  
+  <p> \(\blacksquare \). </p>
+  
+  
+  <p>  (vease que al final en la prueba se concluye que \(q_{0}\) es compuesto , ver eso da un chispazo de luz sobre lo que dice el T.F.A (junto al ver ahora los dos productos de \(p\) s' y \(q\) 's) , se pudo escoger cualquier otro \(p_{i},q_{j}\) pero no se pierde generalidad). </p>
+  
+  
+  <p> <b> Ejercicio al lector :</b> Probar el T.F.A mediante inducción (hint : Si se tiene una colección de enteros
+    \(a_{0},..,a_{n}\) y un número primo \(p\) tal que es divisor de \(a_{0}\cdot a_{1}\cdot ...\cdot a_{n}\) , entonces
+    \(p\) divide a algún \(a_{i}\)).   </p>
+  
+  
+  <h2> Ejemplos. </h2>
+  
+  <p> Piensa en \(5\) números y trata de obtener dos descomposiones en factores primos. </p>
+  
+  
+    (basta con remplzara los anteriores ejemplos en la prueba del T.F.A para ilustrar muy bien la idea que se captura).
+
+  
+ <h2> Aplicaciones. </h2>
+  
+  
+  <p> Vamos a pensar en este problema :  </p>
+  
+  <center> Sea \(n\in \mathbb{N}\) , ¿cual es el número de divisores de \(n\)?. </center>
+  
+  <p> Si se consideran números muy grandes la anterior tarea se vuelve muy tediosa (intente con números de \(5\) cifras
+    y vera lo pesada que se puede volver la tarea) , la pregunta anterior no es para nada ociosa (dentro de la teoría
+    de números tiene un gran valor) , para motivar este problema considera el siguiente ejercicio (extraido del libro de teoría de números
+    de María Luisa Pérez Seguí) :  </p>
+  
+  <p> <i> Se tienen \(n\) focos númerados del \(1\) al \(n\) . Supongase que todos están apagados y que estan conectados cada uno
+    con un apagdor . Una sucesión de \(n\) personas va apagando y prendiendo los focos según la siguiente regla : la primera
+    persona cambia de posición todos los apagadores  ; la segunda cambia de posición todos los apagadores \(2,4,6,8,..\)
+    ; la tercera persona cambia de posición \(3,9,,12,...\) ; así sucesivamente , hasta la ultima persona que solo cambia
+    la posición del apagdor \(n\) . ¿Que focos quedan prendidos al final?.</i> </p>
+  
+  <p>  Vamos a resolver el problema que hemos propuesto al inicio  : por el teorema fundamental de la aritmetica \(n\) se tiene que 
+  podemos escribir a \(n\) de manera unica como producto de primos de esta manera \[n=p_{0}...p_{n}\] donde los \(p_{j}\) son primos
+  (\(0\leq j \leq n \)) , algo a recalcar es que por la definición de factorización prima se dejaba la puerta abierta a factores repetidos , para expresar nuestra
+  factorización de manera mas compacta vamos a utilizar exponentes de esta manera \[n=p_{0}^{\alpha_{0}}...
+    p_{r}^{\alpha_{r}} \] donde los \(\alpha\)  son naturales.</p>
+  
+  
+  <p>  Vamos a considerar un divisor \(v\) de \(n\) , entonces cualquier factor primo \(p\) de \(v\) va a dividir a \(n\)
+  , sin perdida de generalidad supongamos que \(p=p_{i}\) , consideremos la mayor potencia de \(p\) (\(p_{i}^{j_{i}}\)) que divide a \(r\) ,
+  entonces \(p_{i}^{j_{i}}\) divide a \(n\) y por lo tanto \(p_{i}^{j_{i}}\) debe de dividir a \(p_{i}^{\alpha_{i}}\) 
+  , o sea que \(j_{i}\leq \alpha_{i}\) , por lo tanto al considerar todos los factores primos de \(r\) concluimos que
+  todos son de la forma \(v=p_{0}^{j_{0}}...p_{k}^{j_{i}}\) con \(0\leq j_{i}\leq \alpha _{i}\) , de forma contraria si un número
+  es de la forma anterior es un divisor de \(n\) , de esta forma se comportan todos los divisores.</p>
+  
+  <p> Vamos a pensar en una asignación entre la colección \(\alpha_{0},..,\alpha_{n}\) y \(p_{0}^{j_{0}}...p_{i}
+    ^{j_{i}}\) (\(0\leq j_{i}\leq \alpha_{i}\)) , hay que notar (por lo comentado arriba) que para cada \(r_{i}\) hay \(\alpha_{i}+1\)
+  posibilidades , y por combinatoria tendremos que hay \((1+\alpha_{0}\cdot (1+\alpha_{1}))...(1+\alpha_{n})\) divisores en total.</p>
+ 
+  
+  <p>  <b> Ejercicio : </b> Sea \(n\) un número natural  , obten la suma y producto de sus divisores. </p>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
