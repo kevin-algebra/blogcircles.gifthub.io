@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>¿Qué es la teoría de la medida?.</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+
+ <h1> ¿Que es la teoría de la medida?. </h1>
+  
+  
+<h2> Acto I : La integral.  </h2>  
+  
+  
+<p> Comenzemos esta entrada recordando muy brevemente la definición de la integral de Riemman . </p>
+  
+<p> Para comenzar diremos que una partición de \([a,b]\) (con \(a ,b\in \mathbb{R} : a &lt b\)) es una lista 
+  finita de números reales \(x_{0},x_{1},..,x_{n}\) donde \(a=x_{0}&lt x_{1} &lt \cdots &lt x_{n}=b \) 
+  , o sea estamos viendo a \([a,b]\) como una unión de subintervalos cerrados disjuntos \[[a,b]=\bigcup_{i=1}^{n}\left [ x_{i-1},x_{i} \right ]\]   </p>  
+  
+<p> Vamos a considerar una función \(f:[a,b]\rightarrow \mathbb{R}\) que es acotada y una partición 
+  \(\mathbf{P}\) de \([a,b]\) , se define la suma inferior de Riemman (denotada como \(\mathcal{L}(f,\mathbf{P},[a,b])\)) 
+como \[\mathcal{L}(f,\mathbf{P},[a,b])=\sum_{i=1}^{n}(x_{i}-x_{i-1})\cdot \underset{[x_{i-1},x_{i}]}{\text{inf}}f\]  
+ donde\(\underset{[x_{i-1},x_{i}]}{\text{inf}}f\) representa el infimo del conjunto de imagenes de \([x_{i-1},x_{i}]\) 
+  bajo \(f\) , y la suma superior de Riemman \(\mathcal{U}(f,\mathbf{P},[a,b])\)  se define de forma analoga 
+  \[\mathcal{L}(f,\mathbf{P},[a,b])=\sum_{i=1}^{n}(x_{i}-x_{i-1})\cdot \underset{[x_{i-1},x_{i}]}{\text{sup}}f\]
+  donde \(\underset{[x_{i-1},x_{i}]}{\text{sup}}f\) es el supremo del conjunto de imagenes de \([x_{i-1},x_{i}]\) bajo \(f\).</p>  
+  
+  
+ <p> <b>Teorema 0 : </b> Supongamos que \(f:[a,b]\rightarrow \mathbb{R}\) es una función acotada y \(\mathbf{P}\),
+ \(\mathbf{P}'\) particiones de \([a,b]\) tal que la lista de la partición \(\mathbf{P}\) es una sublista de
+  la lista de la partición \(\mathbf{P}'\) , entonces \(\mathcal{L}(f,\mathbf{P},[a,b])\leq \mathcal{L}(f,\mathbf{P}',[a,b])\leq \mathcal{U}(f,\mathbf{P}',[a,b]])\leq \mathcal{U}(f,\mathbf{P},[a,b]]).\) </p>
+  
+ <p> <b> Demostración (bozquejo) : </b>  Supongamos que la lista \(x_{0},..,x_{n}\) es la partición \(\mathbf{P}\)  
+  y la lista \(y_{0},..,y_{m}\) es la partición \(\mathbf{P}'\)ambas particiones de \([a,b]\) , para cada
+  \(j=1,.,n\) existe \(k\) entre \(0\) y \(m-1\) y un entero positivo \(r\) tal que \(x_{j-1}=y_{k}
+   &lt y_{k+1} &lt  \cdots &lt y_{k+r} \) , notemos que \[(x_{j}-x_{j-1}) \ \underset{[x_{j-1},x_{j}]}{\text{inf}} f=\sum_{i=1}^{r}(y_{k+1}-y_{k+i-1})\underset{[x_{j-1},x_{j}]}{\text{inf}} \leq \sum_{i=1}^{r}(y_{k+1}-y_{k+i-1})\underset{[y_{k+i-1},x_{k+i}]}{\text{inf}}\]
+  la anterior desigualdad implica que \( \mathcal{L}(f,\mathbf{P},[a,b])\leq \mathcal{L}(f,\mathbf{P}',[a,b])\)
+  , ahora recordando que el infimo de un conjunto de reales es menor o igual que el supremo de ese mismo conjunto 
+  deducimos que \(\mathcal{L}(f,\mathbf{P}',[a,b])\leq \mathcal{U}(f,\mathbf{P}',[a,b]])\) , la desigualdad \(\mathcal{U}(f,\mathbf{P}',[a,b]])\leq \mathcal{U}(f,\mathbf{P},[a,b]])\)
+  se deduce de la misma forma que la primera.
+\(\blacksquare\)  </p>
+  
+  <p> <b> Teorema 1 : </b>  Sea \(f:[a,b]\rightarrow \mathbb{R}\) una función acotada y \(\mathbf{P}\) ,
+  \(\mathbf{P}'\) son particiones de \([a,b]\) , entonces \(\mathcal{L}(f,\mathbf{P},[a,b])\leq \mathcal
+    {U}(f,\mathbf{P}',[a,b])\).</p>
+  
+  <p> <b> Demostración (bozquejo) : </b> Sea \(\mathbf{P}''\) una partición de \([a,b]\) obtenida al fusionar
+  las listas que definen a \(\mathbf{P,P'}\) , entonces 
+  \(\mathcal{L}(f,\mathbf{P},[a,b])\leq \mathcal{L}(f,\mathbf{P}'',[a,b])\leq \mathcal{U}(f,\mathbf{P}'',[a,b])\leq \mathcal{U}(f,\mathbf{P}',[a,b])\). \(\blacksquare\)
+  </p>
+  
+  <p>  Sea \(f:[a,b]\rightarrow \mathbb{R}\) una función acotada , la integral inferior de Riemman (\(\mathcal
+    {L}(f,[a,b])\)) se define como \[\mathcal{L}(f,[a,b])=\underset{\mathbf{P}}{\text{sup}} \ \mathcal{L}(f,\mathbf{P},[a,b])\] 
+  y la integral superior de Riemman (\(\mathcal
+    {U}(f,[a,b])\)) como \[\mathcal{U}(f,[a,b])=\underset{\mathbf{P}}{\text{inf}} \ \mathcal{U}(f,\mathbf{P},[a,b])\]</p>
+  
+  <p> Es facil ver que la integral de riemman inferior es menor o igual que la integral de riemman superior .
+  Una función acotada en un intervalo acotado se dice que es Riemman integrable si la integral de Riemman inferior 
+  coincide con la integral de Riemman superior (o sea son iguales) , y si una función \(f:[a,b]\rightarrow 
+    \mathbb{R}\) es Riemman integrable , la integral de Riemman \(\int_{a}^{b}f\) es definida por 
+  \[\int_{a}^{b}f=\mathcal{L}(f,[a,b])=\mathcal{U}(f,[a,b])\]</p>
+  
+  <p> El siguiente resultado es clave : </p>
+
+  <p> Toda función continua real en cada intervalo cerrado acotado es Riemman integrable. </p>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
