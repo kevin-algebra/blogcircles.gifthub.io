@@ -123,11 +123,70 @@
   Aveces es posible y conveniente particionar un espacio vectorial en otros subespacios disjuntos , veamos un ejemplo de esto :
   
   <p>  Sea \(\mathcal{U}\) el plano \(xy\) y \(\mathcal{W}\) el plano \(yz\) , ambos subespacios de \(\mathbb{R}^{3}\) y 
-    que en efecto  \(\mathcal{U}+\mathcal{V}=\mathbb{R}^{3}\) ta  
+    que en efecto  \(\mathcal{U}+\mathcal{V}=\mathbb{R}^{3}\)  ya que cualquier vector \((x,y,z)\) en \(\mathbb{R}^{3}\) 
+  puede escribirse como \[(x,y,z)=(x,\frac{1}{2}y,0)+(0,\frac{1}{2}y,z)\] donde el primer miembro de la suma 
+  pertenece a \(\mathcal{U}\) y el segundo a \(\mathcal{W}\). Esto nos motiva a dar la siguiente definición :
   </p>
   
+  <p> <b>  Definición : </b> Sean \(\mathcal{U,W}\) dos subespacios del espacio vectorial \(V\) tal que 
+  \(V=\mathcal{U}+\mathcal{W}\) y \(\mathcal{U}\cap \mathcal{W}=\){0} . Direwmos entonces que \(V\) es la
+  <b>suma directa </b> de \(\mathcal{U}\) y \(\mathcal{W}\) y lo podemos escribir como \(V=\mathcal{U}\oplus \mathcal{V}\). </p>
   
   
+  <p> Veamos algunos ejemplos :  </p>
+  
+  
+   <ul>
+  <li>El espacio vectorial \(\mathbb{R}^{2}\) es la suma directa de sus subespacios \(\mathcal{X}=\left \{ (x,0):x\in \mathbb{R} \right \}\)
+     y \(\mathcal{Y}=\left \{ (0,y):y\in \mathbb{R} \right \}\) ya que todo \((x,y)\in \mathbb{R}^{2}\) lo podemos escribir como :
+     \((x,y)=(x,0)+(0,y)\).</li>
+  <li>El espacio vectorial \(\mathcal{C[-1,1]}\) de las funciones continuas en el intervalo \([-1,1]\) tiene como subespacios a
+     \(V_{0}=\left \{ f\in \mathcal{C}[-1,1]: \int_{-1}^{1}f(t)dt=0 \right \}\) y \(V_{1}\) consiste de funciones constantes. Es facil ver
+     que \(\mathcal{C}[-1,1]=V_{0}\oplus V_{1}\).</li>
+  <li>Sea \(\mathbb{R}^{\mathbb{R}}\) el espacio vectorial de todas las funciones reales , \(V_{0},V_{1}\) son
+     dos subespacios , tal que consisten de todas las funciones pares e impares respecdtivamente , entonces
+     \(\mathbb{R}^{R}=V_{0}\oplus V_{1}\).</li>
+</ul> 
+  
+  
+  La siguiente proposición motiva una definición muy importante (no la probaremos aqui) :
+  
+  <p> <b> Proposición : </b> Sean \(V,W\) dos espacios vectoriales , su producto cartesiano \(V\times W\) es tambien
+  un espacio vectorial equipado con las operaciones : \[\begin{matrix}
+a\cdot (\vec{v},\vec{w})=(a\cdot \vec{v},a\cdot \vec{w}\\ 
+(\vec{v}_{0},\vec{w}_{0})+(\vec{v}_{1}+\vec{w}_{1})=(\vec{v}_{0}+\vec{v}_{0},\vec{v}_{1},\vec{w}_{1}).
+\end{matrix}\] con \(0_{V\times V}=(0_{V},0_{W})\). O sea vamos a sumar "entrada" por entrada en este nuevo espacio vectorial. Ahora si procederemos a dar la
+definición : 
+    
+    
+    
+    
+    </p>
+  
+  
+  <p> <b>  </b> Sean \(V,W\) espacios vectoriales y  \(V\times W\) el espacio vectorial formado por su producto cartesiano , 
+  si sus operaciones satisfacen las condiciones de <b> bilinearidad </b> :  </p>
+  
+   <ul>
+  <li>\(a\cdot (\vec{v},\vec{w})=(a\cdot \vec{v},\vec{w})=(\vec{v},a\cdot \vec{w})\)</li>
+  <li>\((a\cdot \vec{v_{0}}+b\cdot \vec{v}_{1},\vec{w})=a\cdot (\vec{v}_{0},\vec{w})+b\cdot (\vec{v}_{1},\vec{w})\)</li>
+  <li>\((\vec{v},c\cdot \vec{w_{0}}+d\cdot \vec{w}_{2})=c\cdot (\vec{v},\vec{w}_{0})+d\cdot (\vec{v},\vec{w}_{1})\)</li>
+</ul> 
+ 
+ Diremos que \(V\times W\) se convierte un espacio vectorial llamado <b> producto tensorial </b > de \(V\) y \(W\)
+  y lo denotamos con \(V\otimes W\) , a los vectores en el espacio del producto tensorial los denotamos como \(\vec{v}\otimes \vec{w}\).
+  
+  <button type="button" onclick="myFunction()">Algunas consideraciónes adicionales.</button>
+
+<p id="demo"> </p>
+
+
+<script>
+function myFunction() { 
+  document.getElementById("demo").innerHTML = "\(\text{dim}(V\otimes W)=\text{dim}(V)\cdot \text{dim}(W).
+  \)";
+}
+ 
   
    <p> <i > En caso de querer profundizar mas en el algebra lineal recomiendo de primera mano el libro : "Linear Algebra 
   Dont Right" de Sheldon Alexander. </i> </p>
@@ -137,7 +196,8 @@
   
  <h2> \(\mathbb{R}^3\) </h2>
   
-  
+ </script>
+
   
 
   
