@@ -28,6 +28,7 @@
   generalización flaquea en dos aspectos : Sus componentes son números reales y son de dimensión finita , y en 
   ocasiones se puede requerir que los vectores carezcan de algunas de las dos propiedades mencionadas. Por lo
   que es mas ventajoso estudiar los vectores de manera aun mas general , con dimension y componentes cualquiera.
+    Nos vamos a enfocar en los \(\mathbb{R}\)-espacios vectoriales.
 </p>
   
   
@@ -71,10 +72,48 @@
      
 </ul> 
  
- <b> Definición 1 : </b> Los vectores \(\vec{v_{0},\vec{v_{1}},...,\vec{v_{n}}\\) son <b>linealmente independientes </b>
+ <b> Definición 1 : </b> Los vectores \(\vec{v_{0}},\vec{v_{1}},...,\vec{v_{n}} \) son <b>linealmente independientes </b>
   si para \(\alpha_{i}\in \mathbb{R}\) , la igualdad \(\sum_{i=0}^{n}\alpha_{i}\vec{v}_{i}\) implica que \(\alpha_{i}=0\)
-  para todo \(i\) , la suma \(\sum_{i=0}^{n}\alpha_{i}\vec{v}_{i}\) se llama <b> combinación lineal </b> de 
+  para todo \(i\) , la suma \(\sum_{i=0}^{n}\alpha_{i}\vec{v}_{i}\) se llama <b> combinación lineal </b> de la familia
+  de vectores \(\vec{v_{0}},...,\vec{v_{n}}\).
   
+  <p> <b> Definición 2 : </b> Sea \(V\) un espacio vectorial , un subconjunto no vacio 
+    \(W\) de \(V\) es un subespacio si es cerrado bajo las operaciones de suma de vectores y producto por escalar 
+    (las mismas que las del espacio \(V\)) , esto si para \(\vec{v}+\vec{w}\in W\) y \(c\cdot \vec{v}\in W\). </p>
+  
+  
+  Algunos ejemplos : 
+  
+   <ul>
+  <li>\(\mathbb{R}^{m}\) es un subespacio de \(\mathbb{R}^{n}\) si \(m &lt; n \). Por lo que el plano \(\mathbb{R}^{2}\)
+     es un subespacio de \(\mathbb{R}^{n}\).</li>
+  <li>Sea \(\mathbb{R}^{\mathbb{R}}\) el espacio vectorial de todas las funciones de la forma \(f:\mathbb{R}
+    \rightarrow \mathbb{R}\) , entonces los conjuntos de todas las funciones continuas en \(\mathbb{R}\) ,  de todas las 
+     funciones en \(\mathbb{R}\) integrables en el intervalo \([a,b]\) ,  de todas las funciones en \(\mathbb{R}\) diferenciables
+     y el de todas las funciones en \(\mathbb{R}\) acotadas son subespacios de \(\mathbb{R}^{\mathbb{R}}\).</li>
+  <li>\(\mathbb{R}_{n}[x]\) el espacio vectorial de todos los polinomios de una variable de gradpo \(n\) y con
+     coeficientes en los reales tiene como subespacio a \(\mathbb{R}_{n-1}[x]\).</li>
+</ul> 
+  
+ <b> Definición 3 : </b> Sea \(S\) un conjunto de vectores del espacio vectorial \(V\), , denotaremos con \(\text{span}(S)\)
+  al espacio generado de \(S\) , o sea a todas las combinaciones lineales de vectores en \(S\).
+  
+  <p> O sea , si \(S=\left \{ \vec{v}_{0},...,\vec{v}_{n} \right \}\) tenemos que: \[\text{span}(S)=\sum_{i=1}^{n}F\vec{v}_{i}\] </p>
+  
+  donde \(F\vec{v}_{i}\) es el subespacio de \(V\) que consiste en todos los multiplos \(c\cdot \vec{v}_{i}\) de
+  \(v_{i}\) (lo mismo que decir que \(F\vec{v }_{i}=\text{span}(v_{i})\)). Directamente se desprende otra definición : 
+ 
+  
+ 
+  <p>   </p>
+  
+ 
+  
+  
+   <p> <i > En caso de querer profundizar mas en el algebra lineal recomiendo de primera mano el libro : "Linear Algebra 
+  Dont Right" de Sheldon Alexander. </i> </p>
+  
+  <h2> Geometría de segmentos dirigidos. </h2>
   
   
  <h2> \(\mathbb{R}^3\) </h2>
@@ -101,4 +140,3 @@
   
 </body>
 </html>
-
