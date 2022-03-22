@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax example</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+
+ <h1> Variedades Simplecticas. </h1>
+  
+ (poner una introducción).
+  
+  <h2> Estructuras simplecticas en variedades</h2>
+  
+  Vamos a partir de la siguente definición : 
+  
+  <p> <b> Definición 0 : </b>  Sea \(M^{2n}\) una variedad diferencial de dimensión par. Una <b> estructura simplectica</b>
+  en \(M^{2n}\) es una 2-forma diferenciable \(\omega^{2}\) cerrada no degenerada en \(M^{2n}\) i.e </p>
+  
+  \[d\omega^{2}=0 \ \text{y} \ \forall \xi \neq 0 \exists \eta : \omega^{2}(\xi ,\eta )\neq 0 \ (\xi ,\eta \in T_{x}M)\]
+  
+  El par \(M^{2n},\omega^{2}\) es llamado <b>  Variedad simplectica. </b> Como ejemplo tenemos al espacio vectorial
+  \(\mathbb{R}^{2n}\) con coordenadas \(p_{i},q_{i}\) y \(w^{2}=\sum dp_{i}\wedge dq_{i}\). 
+  
+  <p> Veamos un poco de la aparición de las variedades simplecticas en la mecanica , junto con el de haz tangente. </p>
+
+  Sea \(V\) una variedad diferenciable \(n\)-dimensional. Una 1-forma en el espacio tangente a \(V\) en un punto \(x\) 
+  se llama vector cotangente a \(V\) en \(x\). El conjunto de todos los vectores contangentes a \(V\) en \(x\) forma
+  un espacio vectorial de dimensión \(n\) , dual al espacio tangente \(TV_{x}\). Denotaremos a este espacio vectorial de
+  vectores cotangentes por \(T^*V_{x}\) y lo llamamos el espacio cotangente de \(V\) en \(x\).
+  
+  <p> La unión de espacios cotangentes a la variedad en todos sus puntos se llama haz cotangente de \(V\) y se
+  denota por \(T^* V\). El conjunto \(T^*V\) tiene estructura natural de variedad diferenciable de dimensión \(2n\)
+  . Un punto de \(T^* V\) es una 1-forma en el espacio tangente a \(V\) en alguno de sus puntos. Si \(\mathbf{q}\) es
+  una elección de \(n\) coordenadas locales para puntos en \(V\) , entonces dicha forma viene dada por sus \(n\) componentes
+  \(\mathbb{p}\). Juntos , los \(2n\) números \(\mathbf{p,q}\) forman una colecciones de coordenadas locales para puntos en
+  \(T^*V\). Existe una proyección natural \(f:T^*V \rightarrow V\) , esta es diferenciable y sobreyectiva.</p>
+  
+  <p> <b> Teorema 0  :</b> El haz cotangente \(T^*V\) tiene una estructura simplectica natural. En las coordenadas 
+  locales descritas anteriormente , esta estructura simplectica viene dada por la formula. \[\omega^{2}=d\mathbf{p}\wedge d\mathbf{q}=dp_{0}\wedge dp_{1}\wedge + \cdots + dp
+_{n} \wedge dq_{n}.\]</p>
+  
+  
+  <h2> Variedades simplecticas en física. </h2>
+  
+  Retomemos la función Hamiltoniana \[H(\mathbf{p,q})=\sum_{i}p_{i}\dot{q}_{i}-L(\mathbf{q,\dot{q}}) \] si 
+  fijamos \(p_{i}=\frac{\partial L}{\partial \dot{q}_{i}}\) , usando las ecuaciones de Euler-Lagrange obtenemos
+  \[\dot{p}_{i}=\frac{dp_{i} }{d t}=-\frac{\partial H }{\partial q_{i}} , \dot{q}_{i}=\frac{\partial H }{\partial p_{i}}.
+\] Las anteriores son llamadas ecuaciones de Hamilton para las leyes de Newton.
+  
+  <p> Podemos generalizar las anteriores ecuaciones a una función Lagrangiana abritraria \(L\mathbf{q,\cdot{q}}\) en 
+  \(\mathbb{R}^{2n}\). Podemos ver \(\mathbb{R}^{2n}\) como el haz tangente \(T(\mathbb{R}^{n})\) a \(\mathbb{R}^{n}\)
+  . Un camino \(\gamma:[t_{0},t_{1}\rightarrow \mathbb{R}^{n}]\) se puede extender al camino.
+  </p>
+  
+  
+</body>
+</html>
+
+
