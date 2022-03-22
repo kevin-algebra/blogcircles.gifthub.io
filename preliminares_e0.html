@@ -176,46 +176,112 @@ definición :
  Diremos que \(V\times W\) se convierte un espacio vectorial llamado <b> producto tensorial </b > de \(V\) y \(W\)
   y lo denotamos con \(V\otimes W\) , a los vectores en el espacio del producto tensorial los denotamos como \(\vec{v}\otimes \vec{w}\).
   
-  <button type="button" onclick="myFunction()">Algunas consideraciónes adicionales.</button>
+  
+  <p> Por ultimo vamos a cerrar este apartado dando una ultima definición importante relacionada  a los 
+  espacios vectoriales , pero tenemos que dar algunas preliminares </p>
+  
 
-<p id="demo"> </p>
+  
+  <p> <b> Definición 7 : </b> Sea \(V\) un espacio vectorial. Una forma bilineal en \(V\) es una trasnformación lineal 
+  \(b:V\times V \rightarrow \mathbb{R}\) tal que :</p>
+  
+   <ul>
+  <li>Para todo \(x\in V\) el mapeo \(b(x,\cdot):V\rightarrow \mathbb{R}\) enviando \(v\) a \(b(x,v)\) es
+     lineal.</li>
+  <li>Para todo \(y\in V\) el mapeo \(b(\cdot,y):V\rightarrow \mathbb{R}\) enviando \(v\) a \(b(v,y)\) es
+     lineal.</li>
 
+</ul> 
 
-<script>
-function myFunction() { 
-  document.getElementById("demo").innerHTML = "\(\text{dim}(V\otimes W)=\text{dim}(V)\cdot \text{dim}(W).
-  \)";
-}
+  La forma bilineal \(b\) es <b>  simetrica </b> si \(b(x,y)=b(y,x)\) para todo \(x,y\in V\).
+  
+  <p>  <b>  Definición 8 : </b> Un <b> producto interior </b> en un espacio vectorial \(V\) es una
+ forma bilineal simétrica positiva definida en \(V\). </p>
+  
+  <p> Y un <b>espacio euclideano  </b> es un espacio vectorial \(V\) de dimensión finita dotado de un producto
+  interno.</p>
+  
  
   
    <p> <i > En caso de querer profundizar mas en el algebra lineal recomiendo de primera mano el libro : "Linear Algebra 
   Dont Right" de Sheldon Alexander. </i> </p>
+  
+  
+  <h2> Matrices. </h2>
   
   <h2> Geometría de segmentos dirigidos. </h2>
   
   
  <h2> \(\mathbb{R}^3\) </h2>
   
+  
+  En el espacio \(\mathbb{R}^{3}\) para ubicar un punto es necesario de tres coordenadas que son una terna de números reales
+  (a cada punto le asociamos una terna , esta correspondencia es biyectiva) . Vamos a medir la distancia de dos puntos
+  \(P=(x_{0},y_{0},z_{0})\) y \(Q=(x_{1},y_{1},z_{1})\) de
+  la forma usual (usando la <b> distancia Euclidea </b>) \[d(P,Q)=\sqrt{(x_{0}-x_{1})^{2}+(y_{0}-y_{1})^{2}+(z_{1}-z_{0})^{2}}\]
+  
+  Esta forma de medir es motivada por el <b> teorema de pitagoras </b> (recordemos que en \(\mathbb{R}^{2}\) podemos medir distancias mediante 
+  este resultado).
+  
+  <p> imagen de pitagoras en R^3. </p>
+  
+  Aunque la distancia Euclidea sea la forma clasica de medir dos puntos existen otras formas de hacerlo , para
+  retratar esto vamos a trabajar en \(\mathbb{R}^{2}\) , ahí la distancia Euclidea del punto \((x_{0},y_{0})\) al
+  \((x_{1},y_{1})\) es \(\ \sqrt{(x_{0}-x_{1})^{2}+(y_{0}-y_{1})^{2}}\) , vamos a considerar otra forma de medir , 
+  vamos a llamarle <b> metrica del taxi </b> 
+  
+  <p>  poner imagen de como se mide en la metrica del taxi </p>
+  
+  considerando esa forma de medir las distancias , ahora la distancia de los puntos \((x_{0},y_{0})\) ,
+  \((x_{1},y_{1})\) sera \(|x_{0}-x_{1}|+|y_{0}+y_{1}|\) , también esta forma de medir se le llama la distancía de 
+  Manhattan. Otro ejemplo de otra forma de medir la distancia de los puntos es mediante la <b> metrica del
+  maximo </b> donde la distancia de los puntos \((x_{0},y_{0})\) ,
+  \((x_{1},y_{1})\) es ahora \(\text{max} \) {\(|x_{0}-x_{1}|,|y_{0}-y_{1}|\)}. 
+  
+  
+  <p> Imagejn de como se mide en la metrica del maximo </p>
+  
+  Podemos seguir considerando mas formas de como medir dos puntos , y esto no es una tarea para nada ociosa ya que
+  es facil comenzar a ver cambios a la hora de sustituir la distancia euclidea por alguna otra y seguir trabajando, por ejemplo , vamos
+  a considerar la definición de circunferencia y remplazemos la distancia euclidea por la metrica del taxi , ahora una
+  circunferencia de radio \(2\) luce de esta manera :
+  
+  <p> ponerla </p>
+  
+  mientras que si lo hacemos con la metrica del maximo tendremos que la circunferencia ahora lucira como : 
+  
+  <p> . </p>
+  
+  Hay que tomar en cuenta que no cualquier forma de medir sera una distancia (en el sentido que esperamos de una
+  distancia) , para que una distancia \(d\) sea apropiada debe de satisfacer : 
+   <ul>
+  <li>\(d(P,Q)=0\) si y solo si \(P=Q\)</li>
+  <li>\(d(P,Q)=d(Q,P)\)</li>
+  <li>\(d(P,Q)\geq 0\) para todo \(P,Q\)</li>
+   <li> \(d(P,Q)+d(Q,R)\geq d(P,R)\) </li>  
+</ul> 
+ 
+ lo anterior es lo que nos esperamos de una distancia , si una distancia \(d\) satisface las anteriores propiedades
+  diremos que el par \(\mathbb{R}^{n},d\) es un <b>espacio metrico </b> , esta idea lo podemos generalizar para un conjunto 
+  arbitrario \(X\) y una distancia \(d\) definida para sus elementos (la idea de espacio metrico generaliza y captura
+  la idea de medir en el sentido que esperamos) , a la distancia \(d\) le podemos llamar metrica.La metrica del
+  taxi y la metrica del maximo si las equipamos respectivamente a \(\mathbb{R}^{2}\) forman espacios metricos , si
+  consideramos la distancia en el plano \(d_{p}=(x_{0}-x_{1})^{p}+(y_{0}-y_{1})^{p}\) con \(p\geq  1\) forma un espacio
+  metrico con \(\mathbb{R}^{2}\) ,  vemos que \(d_{1}\) es la metrica del taxi ,  \(d_{2}\) es la
+  distancia Euclidea , y si \(p\to \infty \) obtenemos \(d_{\infty }\) que es la metrica del maximo.
+
+  <p> La geometría puede cambiar en función de la metrica en la que decidamos trabajar ,  por ejemplo en geometría
+  Riemmaniana juega un rol muy importante los espacios metricos , donde la distancia de entre dos puntos varia de 
+  donde estemos situados , ahí el espacio se vuelve curvo , esto ocurre cuando consideramos los puntos
+  \(P,Q\) y la metrica \(d(P,Q)^{2}=A(x_{0}-x_{1})^{2}+B(y_{0}-y_{1})^{2}\) en una esfera donde \(x_{0}=\theta \in [0,2\pi ]\) es la
+  longitud y \(y=\phi \in [0,\pi]\) es la latitud  tomamos \(A=\sin^{2}(y_{0}),B=1\) , dos puntos en el circulo polar
+  artico con longitud fija tienen menor distncia que dos puntos en el ecuador con las mismas longitudes fijar.</p>
+
+  <p> poner imagen de la esfera</p>
+  
+  
+  Debemos de pensar en la superficie de la esfera como un espacio en si mismo (sin olvidar que esta incrustado en
+  \(\mathbb{R}^{3}\)). Este el marco de trabajo donde se desarrollo la relatividad general.
+  
+  
  </script>
-
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</body>
-</html>
