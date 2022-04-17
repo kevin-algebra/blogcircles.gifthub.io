@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax example</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<p>
+ En esta entrada vamos a hablar de la idea de la antipartícula de la una partícula. 
+
+
+
+
+
+Consideremos la ecuación de Schrödinger 
+
+\[i\hbar \frac{\partial \psi }{\partial x}=\left ( -\frac{\hbar ^{2}}{2m}\nabla ^{2}+V \right )\psi \]
+  
+
+que podemos deducir apartir de la relación clásica \(E=\frac{p^{2}}{2m} \) y de hacer la siguiente sustitución 
+  por los operadores \[E\rightarrow i\hbar \frac{\partial}{\partial t} \ , \ p\rightarrow -i\hbar \nabla .\]
+  
+  Una pregunta para nada ociosa es ¿La ecuación de Schrödinger es valida para particulas que se mueven a velocidades
+ relativistas (i.e cercanas a la velocidad de la luz)?. La relatividad especial nos dice que : \[E=p^{2}c^{2}+m^{2}c^{4}\]
+
+ (consideramos energia y momento relativista) ; esta relación nos permite reescribir la ecuación de Schrödinger como
+  
+  \[\left (\frac{1}{c^{2}}\frac{\partial ^{2}}{\partial  t^{2}}- \nabla ^{2}   \right )\phi +\frac{m^{2}c^{2}}{\hbar^{2}}\phi \]
+
+ a esta nueva ecuación le vamos a conocer con el nombre de <b> ecuación de Klein-Gordon </b>.  
+
+  <p> Cuando \(\phi\) se comporta como un escalar (o sea cantidades
+    invariantes para todo observador inercial) bajo trasnformaciones de Lorentz , la ecuación de Klein-Gordon
+  sera compatible con los postulados de la relatividad (y sera valida para particulas con velocidades relativistas).
+  
+  Un precio a pagar por tener una versión relativista de la ecuación de Schrödinger es que \(\phi\) esta 
+  asociada a una particula libre en el espacio-tiempo sin spin de masa \(m\) , si se intenta introducir la noción del spin en la ecuación
+  se pierde la invarianza relativista.</p>
+  
+  
+ <p> Es facil ver que el siguiente ansatz da una solución para la ecuación Klein-Gordon \[\phi = Ae^{\frac{i}{\hbar}(p\cdot x-Et)}\] 
+  esta solución puede formularse de manera covariante como \(\phi(x^{\mu})=Ae^{-\frac{i}{\hbar}p\cdot x}\) donde 
+  \(p\cdot x=\eta_{\nu \mu}p^{\mu} x^{\nu}\) por lo que esta solución es compatible con la relatividad especial. Sin
+  embargo se puede observar que los niveles de energía predichos por la ecuación de Klein-Gordon son  
+  \[E=\pm \sqrt{p^{2}c^{2}+m^{2}c^{4}\] por lo que puede el sistema tener energía negativa , si consideramos la energía
+  negativa el exponente de la solución pierde su forma covariante pero esto puede ser corregido al considerar tiempos
+  negativos , podemos interpretar lo anterior (con la interpretación de Feynman-Stückelberg) como que soluciones de energia positiva se mueven hacia el futuro mientras que
+  soluciones de energía negativa se mueven hacia atras en el tiempo. </p> 
+  
+  
+</p>
+</body>
+</html>
+
+
+
