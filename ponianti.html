@@ -10,19 +10,55 @@
   </script>
 </head>
 <body>
+  
+  
+<p> <i> Como pre-requisito es recomendable que el lector tenga conocimiento de la relatividad especial ,
+  la función de onda y la ecuación de Schrödinger.</i> </p>  
+  
 En esta entrada vamos a hablar de la idea de la antipartícula de la una partícula. 
 
 
 
 
 
-Consideremos la ecuación de Schrödinger 
+En el año de 1923 Luis de Broglie propuso la revolucionaria idea de que las particulas materiales como los fotones
+puedan ser descritas en terminos de ondas , esto fue el comienzo de la <i> mecanica de ondas </i>. Para los fotones Einstein en 1905 dedujo las siguientes relaciónes (fruto de su explicación
+  del fenomeno fotoelectrico) \[E=h\nu \ , \ \lambda =\frac{h}{p}=\frac{h}{mc}\] , donde \(c\) es la velocidad de la luz y \(h\) la constante de Planck. Asi que de forma natural podemos asumir que para particulas materiales se tengan
+  las relaciones \[E=h\nu \ , \ \lambda=\frac{h}{p}=\frac{h}{mv}\] donde \(\lambda\) es la longitud de onda de la particula y \(\nu\) su frecuencia , \(m\) su masa y \(v\) su velocidad , en caso de ser esta relativista tenemos que remplazar \(mv\)
+  con \(\gamma mv=\frac{mv}{\sqrt{1-\frac{v^{2}}{c^{2}}}}\). Esta idea fue comprobada en 1927 en el experimento de
+  Davison-Germer sobre difracción de electrones dispersados por un cristal. 
+  
+  
+  <p>Con el desarrollo de la mecanica matricial (motivada por la insistencia en que la teoría debe incluir solo observables , como los niveles de energía o las tasas de emisión y absorción)  por Heisenberg , Born , Jordon y Pauli en los años 1925-1926 permitieron
+  que la mecanica de ondas diera su siguiente paso,  en Schrödinger revivio la mecanica de ondas en su serie de articulos de 1926 ,
+   sugiere su famosa ecuación de onda (no relativista) la cual todos conocemos por el nombre de ecuación de Schrödinger : 
+  </p>
+  
+  
 
 \[i\hbar \frac{\partial \psi }{\partial x}=\left ( -\frac{\hbar ^{2}}{2m}\nabla ^{2}+V \right )\psi \]
   
 
-que podemos deducir apartir de la relación clásica \(E=\frac{p^{2}}{2m} \) y de hacer la siguiente sustitución 
-  por los operadores \[E\rightarrow i\hbar \frac{\partial}{\partial t} \ , \ p\rightarrow -i\hbar \nabla .\]
+tenemos que \(\hbar=\frac{h}{2\pi}\) y \(\psi\) es la función de onda , de donde podemos interpretar que \(|\psi|^{2}\) es la densidad de probabilidad :
+\(\psi^{*}(\vec{r},t) \psi(\vec{r},t)dV\) es la probabilidad de que una particula se encuentre en el instante \(t\) dentro de un elemento de volumen \(dV\) centrado en el punto
+  \(\vec{r}\) , como \(\psi \) esta normalizada i.e \[\int_{-\infty }^{\infty }\int_{-\infty }^{\infty }\int_{-\infty }^{\infty }\psi^{*}(\vec{r},t)\psi(\vec{r},t)dV=1\]
+ la suma de las probabilidades de encontrar a la particula en cada elemento de volumen del espacio es igual a la unidad , o sea la particula esta en algún punto del espacio. La función  de onda
+  nos revela que en la mecanica cuantica aparecen propiedades radicalemente diferentes a las que estamos acostumbrados en la mecanica clasica , como :
+  
+<ul>
+  <li>La cuantización de la energía , existe un espectro discreto de valores de energía.</li>
+  <li>La posibilidad de que haces de partículas atraviesen parcialmente barreras de potencial (efecto tunel) que para la mecanica clásica
+  serian infranqueables , ademas del fenokmeno inverso (haces de particulas reflejados en situaciónes donde la mecanica clasica diria lo contrario).</li>
+
+  
+</ul>
+
+  
+  
+  
+  
+ <p>  La ecuación de Schrödinger la podemos deducir apartir de la relación clásica \(E=\frac{p^{2}}{2m} \) y de hacer la siguiente sustitución 
+  por los operadores </p> \[E\rightarrow i\hbar \frac{\partial}{\partial t} \ , \ p\rightarrow -i\hbar \nabla .\]
   
   Una pregunta para nada ociosa es ¿La ecuación de Schrödinger es valida para particulas que se mueven a velocidades
  relativistas (i.e cercanas a la velocidad de la luz)?. La relatividad especial nos dice que : \[E=p^{2}c^{2}+m^{2}c^{4}\]
@@ -31,7 +67,8 @@ que podemos deducir apartir de la relación clásica \(E=\frac{p^{2}}{2m} \) y d
   
   \[\left (\frac{1}{c^{2}}\frac{\partial ^{2}}{\partial  t^{2}}- \nabla ^{2}   \right )\phi +\frac{m^{2}c^{2}}{\hbar^{2}}\phi \]
 
- a esta nueva ecuación le vamos a conocer con el nombre de <b> ecuación de Klein-Gordon </b>.  
+ a esta nueva ecuación le vamos a conocer con el nombre de <b> ecuación de Klein-Gordon </b> (Schrödinger trabajo en el mismo problema de la deducción de onda relativista, cuando publico sus resultados ya habia sidos redescubiertos de forma independiente por Klein y Gordon. ). Veamos
+  un poco que nos ofrece esta ecuación. 
 
   <p> Cuando \(\phi\) se comporta como un escalar (o sea cantidades
     invariantes para todo observador inercial) bajo trasnformaciones de Lorentz , la ecuación de Klein-Gordon
@@ -78,9 +115,7 @@ que podemos deducir apartir de la relación clásica \(E=\frac{p^{2}}{2m} \) y d
   
   
   
-  <p> ¿Pero que hay de las particulas con spin? , aunque la ecuación de Klein-Gordon satisface en cierta medida
-  el deseo de tener una ecuación de Schrödinger relativista la ausencia del spin limita su uso (por ejemplo
-    no podemos usar Klein-Gordon para un electron) , Dirac en el año de 1927 (d.c.c) dedujo </p>
+  <p>Apesar de los exitos que tuvo la ecuación de Klein-Gordon aun no existia una teoría relativista que incorporara el spin (algo vital ya que particulas como el electron o el proton tienen spin). </p>
   
   </body>
 </html>
@@ -95,6 +130,10 @@ que podemos deducir apartir de la relación clásica \(E=\frac{p^{2}}{2m} \) y d
 .
 </body>
 </html>
+
+
+
+
 
 
 
