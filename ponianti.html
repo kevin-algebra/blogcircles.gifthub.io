@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -140,24 +141,65 @@ tenemos que \(\hbar=\frac{h}{2\pi}\) y \(\psi\) es la función de onda , de dond
   <p> Retomando la interpretación de Feynman-Stuckelberg , nos permite tener una forma de ver mas sencilla y convincente los estados de
   energía negativa ; en esta formulación los estados de energía negativa se expresan como estados de energía positiva de una particula diferente (el positron) ,
   el electron y el positron aparecen en pìe de igualdad y ya no es necesario el mar de Dirac (idea que a muchos físicos les incomodo). La ecuación
-  de Dirac predice  que para cada particula existe una antiparticula correspondienrte , de igual masa pero carga de signo diferente. </p>
-    
+  de Dirac predice  que para cada particula existe una antiparticula correspondienrte , de igual masa pero carga de signo diferente (por ejemplo , el positron es el antielectron). En 1955 se 
+  descubrio el antiproton y al año siguiente el antineutron. Para representar una antiparticula colocamos una barra por encima del simbolo que representa a la particula (\(\bar{p}\) es el antiproton , \(\bar{n} \) es el antineutron)
+  o simplemente especificar la carga (\(e^{+}\) es el positron , \(\mu^{+}\) el antimuon). Algunas particulas neutrales como son sus
+  propias antiparticulas , el ejemplo mas comun es el foton \(\bar{\gamma}=\gamma\) , como se advirtio no todas las particulas neutras son sus antiparticulas y como 
+  ejemplo esta el neutron-antineutron , el neutron tiene otros números cuanticos distintos al antineutrón.
   
-  <p> Para una mejor explicanción de lo que esta ocurriendo vamos a adentrarnos en el mundo de la teoría cuantica de campos (QFT).. La ecuación de Dirac es \[i\hbar \gamma^{\mu}\partial_{\mu}\Psi-mc\Psi=0\] donde \(\partial_{\mu}:=\frac{\partial}{\partial x^{\mu}} \ , \ \mu=0,1,...\) (notación covariante)
-  , \(\gamma^{\mu}\) es una matriz definida como \[\sigma_{x}=\begin{pmatrix}
+  Un principio general en la física de particulas es la simetría de cruce , si tenemos una reacción como \[A+B\rightarrow C+D\]
+  cualquiera de esas particulas puede ser cruzada al otro lado de la ecuación , siempre que se convierta en su antiparticula , y la interacción
+  resultante estará permitida , por ejemplo \[A\rightarrow \bar{B}+C+D\] \[A+\bar{C}\rightarrow \bar{B}+D\] \[\bar{C}+\bar{D}\rightarrow \bar{A}+\bar{B}\]
+  La simetría de cruce tiene muchas aplicaciones dentro de la física de particulas , por ejemplo la dispersión Compton :
+  \[\gamma +e^{-}\rightarrow \gamma + e^{-}\] es realmente el mismo proceso que la aniquulicación de pares (conversión de la masa de un electrón y un positrón en energía).
+  \[e^{-}+e^{+}\rightarrow \gamma+\gamma\] aunque en los experimentos sean fenomenos totalmente diferentes. La combinación de
+  la relatividad general con la mecanica cuantica nos ha conducido a esta simetría materia/antimateria , una pregunta que aflora 
+  en la mente es : ¿Por que abundan los protones , electrones y neutrones en vez de sus correspondientes antiparticulas?. La materia
+  y antimateria no pueden convivir por mucho tiempo , si una particula se encuentra con su antiparticula se aniquilan , por lo que
+  puede ser un accidente que en nuestra parte del universo haya mas materia que antimateria y que la aniquilación de pares haya eliminado casi por completo todo. </p>
+  
+   
+  
+  <p> Para una mejor comprensión de lo que esta ocurriendo vamos a adentrarnos en el mundo de la teoría cuantica de campos (QFT) que es la teoría adecuada para explicar esta idea (mas en especifico en la electrodinamica cuantica). La ecuación de Dirac es \[i\hbar \gamma^{\mu}\partial_{\mu}\Psi-mc\Psi=0\] donde \(\partial_{\mu}:=\frac{\partial}{\partial x^{\mu}} \ , \ \mu=0,1,...\) (notación covariante)
+  , \(\gamma^{\mu}\) es una matriz definida como \[\begin{pmatrix}
+1 &0  \\
+0 &  -1\\
+\end{pmatrix}=\gamma^{0} \ , \ \gamma^{i}=\begin{pmatrix}
+0 & \sigma^{i} \\
+-\sigma^{i} &0  \\
+\end{pmatrix}\]
+    
+    
+    
+    
+    
+    
+    
+donde  el \(1\) representa a una matriz unitaria de \(2\times 2\) y \(0\) una matriz de \(2\times 2\) nula y \(\sigma^{i}\) (\(i=1,2,3\)) son las matrices de Pauli (vitales a la hora de describir el spin)  \[\sigma^{1}=\begin{pmatrix}
 0 & 1 \\
 1 & 0 \\
 \end{pmatrix} \ ,
-\sigma_{y}=\begin{pmatrix}
-0 & \sigma^{i}-i \\
- -i & 0 \\
-\end{pmatrix} \ , \sigma_{z}=\begin{pmatrix}
+\sigma^{2}=\begin{pmatrix}
+0 & -i \\
+ i & 0 \\
+\end{pmatrix} \ , \sigma^{3}=\begin{pmatrix}
 1 & 0 \\
 0 & -1 \\
 \end{pmatrix}\]
     
     
     
-    el \(1\) representa a una matriz </p>
+ Vease que ahora \(\Psi\) es una matriz columna de elementos \[\Psi=\begin{pmatrix}
+\psi_{1} \\
+ \psi_{2}\\
+ \psi_{3}\\
+\psi_{4}\\
+\end{pmatrix}\] Lo llamaremos espinor de Dirac.  </p>
   </body>
 </html>
+
+
+
+
+
+
