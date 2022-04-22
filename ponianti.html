@@ -12,8 +12,7 @@
 <body>
   
   
-<p> <i> Como pre-requisito es recomendable que el lector tenga conocimiento de la relatividad especial ,
-  la función de onda y la ecuación de Schrödinger.</i> </p>  
+<p> <i> Entrada piloto (puede contener muchos errores).</i> </p>  
   
 En esta entrada vamos a hablar de la idea de la antipartícula de la una partícula. 
 
@@ -155,11 +154,12 @@ tenemos que \(\hbar=\frac{h}{2\pi}\) y \(\psi\) es la función de onda , de dond
   la relatividad general con la mecanica cuantica nos ha conducido a esta simetría materia/antimateria , una pregunta que aflora 
   en la mente es : ¿Por que abundan los protones , electrones y neutrones en vez de sus correspondientes antiparticulas?. La materia
   y antimateria no pueden convivir por mucho tiempo , si una particula se encuentra con su antiparticula se aniquilan , por lo que
-  puede ser un accidente que en nuestra parte del universo haya mas materia que antimateria y que la aniquilación de pares haya eliminado casi por completo todo. </p>
+  puede ser un accidente que en nuestra parte del universo haya mas materia que antimateria y que la aniquilación de pares haya eliminado casi por completo todo. 
+ El fenomeno de la radiación de Hawking esta relacionado con la aniquilación de antiparticulas.</p>
   
    
   
-  <p> Para una mejor comprensión de lo que esta ocurriendo se necesita adentrarse en el mundo de la teoría cuantica de campos (QFT) que es la teoría adecuada para explicar esta idea (mas en especifico en la electrodinamica cuantica). La ecuación de Dirac es \[i\hbar \gamma^{\mu}\partial_{\mu}\Psi-mc\Psi=0\] donde \(\partial_{\mu}:=\frac{\partial}{\partial x^{\mu}} \ , \ \mu=0,1,...\) (notación covariante)
+  <p> Para una mejor comprensión de lo que esta ocurriendo se necesita adentrarse en el mundo de la teoría cuantica de campos (QFT) que es la teoría adecuada para explicar esta idea (mas en especifico en la electrodinamica cuantica) ; la QFT fue motivada por la predición de Dirac de las antiparticulas , esta teoría es la mas precisa de la física. La ecuación de Dirac es \[i\hbar \gamma^{\mu}\partial_{\mu}\Psi-mc\Psi=0\] donde \(\partial_{\mu}:=\frac{\partial}{\partial x^{\mu}} \ , \ \mu=0,1,...\) (notación covariante)
   , \(\gamma^{\mu}\) es una matriz definida como \[\begin{pmatrix}
 1 &0  \\
 0 &  -1\\
@@ -196,12 +196,57 @@ donde  el \(1\) representa a una matriz unitaria de \(2\times 2\) y \(0\) una ma
 \end{pmatrix}\] Lo llamaremos espinor de Dirac.  </p>
   
   
- <p> Para concluir veamos ejemplos de algunas antiparticulas :
+  
+ <p> Veamos un poco mas de QED , vamos a enfocarnos especialmente en la QED , podemos expresar algunas cosas en terminos de los
+  diagramas de Feynman , como ejemplo , todos los fenomenos electromagneticos  son reducibles en última instancia al siguiente proceso elemental</p> 
+  
+  
+  <p> El diagrama debe leerse como  </p>
+  
+  <p> El diagrama nos dice que una particula (consideramos que es un electrón , aunque en otras cirscuntancias puede ser un quark o cualquier lepton a exepción del neutron) cargada \(e\) entra , emite (o absorbe) un fotón , y sale.
+  Veamos otros procesos </p>
+  
+  <p> en ese proceso entran dos electrones , pasa un fotón entre ellos (el diagrama incluye las configuraciones de quien lo emite o quien lo absorbe) y los dos salen a continuación.
+  ese diagrama describe la interacción entre dos electrones (que dentro de la electrodinamica clasica corresponde a la repulsión de Coulomb , si es que ambos están en reposo) , en la QED a este 
+  proceso le llamamos dispersión de Møiler ; decimos que la interacción esta mediada por el intercambio de fotones. </p>
+  
+  <p> Vemos que una particula va hacia atrás en el tiempo (como indica la flecha) , se debe de interpretar como la correspondiente antiparticula 
+  que va hacia delante. Asi que en este proceso un electrón y un positrón se aniquilan para formar un fotón , que a su vez produce un nuevo par electrón-positron , un electrón-positron entran y un electrón-positron sale.
+  Esto representa la interacción de dos cargas opuestas (su atracción de Coulomb) , en la QED este proceso se llama dispersión de Bhabha. </p>
+  
+  <p> Ambos diagramas explican la dispersión de Bhabha , la dispersión de Bhabha y Møller estan relacionados por la simetría de cruce , la simetría de cruce en terminos de diagramas de Feynman corresponde a la torción o rotación de la figura.
+  Utilizando solo dos vertices  podemos cosntruir los siguientes diagramas :</p>
+  
+  
+  <p> Si permitimos mas vertices , podemos usar mas vertices </p>
+  
+  <p> Las lineas internas (las que comienzan y terminan dentro del diagrama) representan particulas que no se observan (si las pudieramos ver se afectaria por completo el proceso) , las llamamos particulas virtuales ;
+  solo las lineas externas (las que entran o salen del diagrama) son las particulas observables , nos dicen que proceso fisico esta ocurriendo mientras que las internas describen el mecanismo para que ocurran.
+  Los diagramas de Feynman son puramente simbolicos (no describen trayectorias) , los espacios horizontales no corresponden a 
+  separaciones físicas , como ejemplo , en la dispersión de Bhabha el electrón y el positrón se atraen , no se repelen (como pueden sugerir las lineas divergentes) , el diagrama 
+  solo nos dice que una vez hubo un electrón y un positron , intercambiaron fotones , luego hubo de nuevo un electrón y un positron. Con las "reglas de Feynman" es posible asociarle un número (la amplitud del proceso , este número sirve para estudiar la tasa de decaimiento \(\Gamma\)) , en el calculo
+  de la amplitud del fenomeno consideramos que cada linea y vertice contribuye una determinada cantidad (en el caso de los vertices la constante de acomplamiento del la interacción que rige el fenomeno esta presente) ,  los vertices estan asociados en el proceso
+  con \(\alpha=\frac{e^{2}}{\hbar c}=\frac{1}{137} \) (la constante de estructura fina) , en las reglas de Feynman para la QED en el factor de cada vertice esta la constante de acoplamiento \(g_{e}=\sqrt{4\pi \alpha}\) . La conservación de la energía
+  y el momento en cada vertice (y por ende en todo el diagrama) viene contenido en las reglas de Feynman. </p>
+  
+  
+ 
+  
+ <p> Para concluir veamos ejemplos de algunas antiparticulas , en particular de los Leptones que son una de las 
+   familias de particulas del modelo estandar de particulas (una clasificación de particulas que son los bloques
+   fundamentales de la naturaleza  .  Los leptones son fermiones  (tienen no entero spin \(\frac{1}{2}\) ), tienen masas
+   muy pequeñas y sus interacciones obedecen un principio de conservación.  
   </p> 
   
   
- <p> 
-  </p> 
+   <i> The six leptons. </i>
+  
+
+  
+  <p> En todas las interacciones entre leptones se conserva cada número leptonico por separado , en correspondencia con los
+  tres pares de leptones hay tres números leptonicos \(L_{e},L_{\mu},L_{\tau}\) , al electrón y al neutrino electronico se le
+  asigna \(L_{e}\) y a sus antiparticulas \(L_{e}=-1\) , las asignaciones \(L_{\mu},L_{\tau}\) se hacen de forma correspondiente a las 
+  particulas \(\tau,\mu\).</p>
   
   </body>
 </html>
